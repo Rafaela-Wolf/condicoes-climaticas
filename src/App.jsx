@@ -1,9 +1,11 @@
-import CurrentWeather from './components/CurrentWeather';
-import Forecast from './components/Forecast';
-import Search from './components/Search';
+import CurrentWeather from './components/CurrentWeather.jsx';
+import Forecast from './components/Forecast.jsx';
+import Search from './components/Search.jsx';
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+
+import { MainContainer, Title, Wrapper } from './AppStyles.js';
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
   const [previsao, setPrevisao] = useState([]);
 
   const apiKey = import.meta.env.VITE_API_KEY || "";
-  
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(async (position) => {
       const lat = position.coords.latitude;
@@ -42,12 +44,14 @@ function App() {
   console.log(clima);
 
   return (
-    <div>
-      <h1>Condições climáticas</h1>
-      <Search cidade={cidade} setCidade={setCidade} buscarClima={buscarClima} />
-      {clima && <CurrentWeather clima={clima} />}
-      {previsao.length > 0 && <Forecast previsoes={previsao} />}
-    </div>
+    <Wrapper>
+      <MainContainer>
+        <Title>Pesquise a previsão do tempo da sua cidade</Title>
+        <Search cidade={cidade} setCidade={setCidade} buscarClima={buscarClima} />
+        {clima && <CurrentWeather clima={clima} />}
+        {previsao.length > 0 && <Forecast previsoes={previsao} />}
+      </MainContainer>
+    </Wrapper>
   )
 }
 

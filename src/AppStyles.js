@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const MainContainer = styled.div`
-    background-color: #272c2f;
+    background-color: #1e3a5f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +17,7 @@ export const MainContainer = styled.div`
     width: 40%;
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
 `
 
 export const Title = styled.h1`

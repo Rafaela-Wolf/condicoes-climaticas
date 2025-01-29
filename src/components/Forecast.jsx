@@ -1,19 +1,22 @@
+import { ForecastContainer, ForecastDescription, ForecastImg, ForecastItem, ForecastList, ForecastTemp, ForecastTitle } from "./ForecastStyles";
+
 const Forecast = ({ previsoes }) => {
   return (
-    <div>
-      <h4>Previsão para as próximas horas</h4>
-      <ul>
-        {previsoes.map((previsao) => (
-          <li key={previsao.dt}>
-            <img
+    <ForecastContainer>
+      <ForecastTitle>Previsão para as próximas horas</ForecastTitle>
+      <ForecastList>
+      {previsoes.map((previsao) => (
+          <ForecastItem key={previsao.dt}>
+            <ForecastImg
               src={`http://openweathermap.org/img/wn/${previsao.weather[0].icon}.png`}
               alt={previsao.weather[0].description}
             />
-            {Math.round(previsao.main.temp)}°C - {previsao.weather[0].description}
-          </li>
+            <ForecastTemp>{Math.round(previsao.main.temp)}°C</ForecastTemp>
+            <ForecastDescription>{previsao.weather[0].description}</ForecastDescription>
+          </ForecastItem>
         ))}
-      </ul>
-    </div>
+      </ForecastList>
+    </ForecastContainer>
   );
 };
 

@@ -13,6 +13,10 @@ export const ForecastTitle = styled.h4`
     font-weight: 400;
     color:  #acb7bc;
     text-align: center;
+
+    @media(max-width: 600px) {
+        font-size: 16px;
+    }
 `
 
 export const ForecastList = styled.ul`

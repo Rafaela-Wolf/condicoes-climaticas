@@ -14,6 +14,10 @@ export const CurrentWeatherTitle = styled.h3`
     padding-top: 15px;
     text-transform: uppercase;
     text-align: center;
+
+    @media(max-width: 600px) {
+       font-size: 16px;
+    }
 `
 
 export const ImgDescContainer = styled.div`
@@ -21,11 +25,12 @@ export const ImgDescContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 5px;
 `
 
 export const Img = styled.img`
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
 `
 
 export const WeatherDescription = styled.p`
@@ -39,5 +44,5 @@ export const Temp = styled.p`
     font-size: 60px;
     font-weight: 100;
     color:  #acb7bc;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 `

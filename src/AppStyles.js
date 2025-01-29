@@ -18,6 +18,18 @@ export const MainContainer = styled.div`
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+
+    @media(max-width: 900px) {
+        width: 60%;
+    }
+
+    @media(max-width: 768px) {
+        width: 80%;
+    }
+
+    @media(max-width: 600px) {
+        width: 90%;
+    }
 `
 
 export const Title = styled.h1`
@@ -28,4 +40,8 @@ export const Title = styled.h1`
     color: #acb7bc;
     padding: 15px;
     line-height: 1.5;
+
+    @media(max-width: 600px) {
+        font-size: 16px;
+    }
 `

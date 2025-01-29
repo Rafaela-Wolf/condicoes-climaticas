@@ -4,7 +4,7 @@ export const SearchBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 20px 15px 0 15px;
   width: 100%;
   gap: 10px;
 `;

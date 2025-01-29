@@ -14,6 +14,7 @@ export const CurrentWeatherTitle = styled.h3`
     padding-top: 15px;
     text-transform: uppercase;
     text-align: center;
+    align-items: center;
 
     @media(max-width: 600px) {
        font-size: 16px;
